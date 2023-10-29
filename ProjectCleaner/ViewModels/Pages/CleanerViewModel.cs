@@ -9,15 +9,16 @@ using ProjectCleaner.Helpers;
 using ProjectCleaner.Models;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.IO.Packaging;
 using System.Reflection;
+using System.Resources;
+using System.Windows.Resources;
 using Wpf.Ui.Controls;
 
 namespace ProjectCleaner.ViewModels.Pages
 {
     public partial class CleanerViewModel : ObservableObject, INavigationAware
     {
-        private const string _cleanerDirectoryPath = "Resources/Cleaner";
-
         // Fields
         private bool _isInitialized = false;
 
@@ -55,15 +56,30 @@ namespace ProjectCleaner.ViewModels.Pages
             try
             {
                 // Get all cleaners from directory (Resources/Cleaner)
-                var files = Directory.GetFiles($"../../../{_cleanerDirectoryPath}", "*.cleaner");
+                string[] files = new string[] {
+                    "pack://application:,,,/Resources/Cleaner/VisualStudio.cleaner",
+                    // Add ligne ..
+                };
 
-                // Add cleaners to list
-                foreach (var file in files)
+                foreach (string file in files)
                 {
-                    var cleaner = new Cleaner();
-                    cleaner.Name = Path.GetFileNameWithoutExtension(file);
-                    cleaner.Rules = new List<string>(File.ReadAllLines(file));
-                    Cleaners.Add(cleaner);
+                    var fileStreamInfo = Application.GetResourceStream(new Uri(file));
+
+                    if (fileStreamInfo != null)
+                    {
+                        using (var reader = new StreamReader(fileStreamInfo.Stream))
+                        {
+                            var fileContent = reader.ReadToEnd();
+                            // Utilisez le contenu du fichier comme vous le souhaitez ici
+
+                            var cleaner = new Cleaner();
+
+                            cleaner.Name = Path.GetFileNameWithoutExtension(file);
+                            cleaner.Rules = new List<string>(fileContent.Split(Environment.NewLine));
+
+                            Cleaners.Add(cleaner);
+                        }
+                    }
                 }
 
                 // Order by name (ascending)
