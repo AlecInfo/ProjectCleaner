@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
-    <img src="https://github.com/AlecInfo/ProjectCleaner/blob/main/ProjectCleaner/Assets/accessoriessystemcleaner_512.png" alt="Logo" width="128">
+    <img src="https://github.com/AlecInfo/ProjectCleaner/blob/main/ProjectCleaner/Assets/accessoriessystemcleaner_512.png" alt="Logo" width="192">
   <br>
 </h1>
 
