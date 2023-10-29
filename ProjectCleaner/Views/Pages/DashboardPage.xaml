@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="ProjectCleaner.Views.Pages.DashboardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ProjectCleaner.Views.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="DashboardPage"
+    d:DataContext="{d:DesignInstance local:DashboardPage,
+                                     IsDesignTimeCreatable=False}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    mc:Ignorable="d">
+    
+    <Grid>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Width="680" Height="430">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="24" FontWeight="Bold" Margin="10">
+                Welcome to the Project Cleaner Application!
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="10">
+                Simplify your development workflow with our intuitive project cleaning solution. Effortlessly manage your project files and optimize your development process.
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="10">
+                The '.cleaner' file enables you to declutter your project structure effectively. Choose from our predefined '.cleaner' templates for common development platforms or customize your own file based on specific project requirements.
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="10">
+                Once the cleaning process is complete, utilize the project zipping feature to streamline your project sharing and storage needs.
+            </TextBlock>
+
+            <ui:Button Content="Go to Cleaner" HorizontalAlignment="Right" Command="{Binding ViewModel.GoToCleanerCommand, Mode=OneWay}" />
+        </StackPanel>
+    </Grid>
+</Page>

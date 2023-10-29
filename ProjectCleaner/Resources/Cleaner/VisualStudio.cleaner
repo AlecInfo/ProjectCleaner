@@ -1,0 +1,59 @@
+﻿# Fichiers Visual Studio
+*.obj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+ipch/
+obj/
+TestResults/
+
+# Dossiers Visual Studio
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Dd]ebugPublic/
+[Rr]eleasePublic/
+[Dd]ebug/
+[Rr]elease/
+[Dd]ebugSymbols/
+[Rr]eleaseSymbols/
+*.VC.db
+*.VC.VC.opendb
+
+# Fichiers d'environnement
+[Tt]humbs.db
+*.DS_Store
+
+# Fichiers de test
+[Tt]est[Rr]esults/
+
+# Dossiers de packages
+packages/
+
+# Fichiers spécifiques aux éditeurs
+*.[Oo]ut
+*.[Mm]D
+*.[Mm]D5
+*.[Ll]og
+*.swp
+
+# Dossiers spécifiques à l'environnement de développement
+.idea/
+.vs/
