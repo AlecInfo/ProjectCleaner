@@ -22,7 +22,7 @@
   <a href="#license">License</a>
 </p>
 
-![Guard image](https://github.com/AlecInfo/Investicard-Pro/blob/main/imgs/temporary2.png)
+![Guard image](https://github.com/AlecInfo/ProjectCleaner/blob/main/ProjectCleaner/Assets/screen.png)
 
 ## Description
 
