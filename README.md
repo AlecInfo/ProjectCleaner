@@ -26,7 +26,7 @@
 
 ## Description
 
-Project Cleaner is a utility application designed to facilitate the cleaning of project directories by enabling the execution of various cleanup operations based on specified rules. The tool allows users to define these rules in .cleaner files, which contain patterns for identifying files and directories to be removed from the project directory. 
+ProjectCleaner is a utility tool developed using the [WPF-UI framework](https://wpfui.lepo.co/) to help users clean and organize their project directories. It simplifies the process of removing unnecessary files and folders from a project, making it easier to share or archive projects effectively.
 
 ## Installation
 
