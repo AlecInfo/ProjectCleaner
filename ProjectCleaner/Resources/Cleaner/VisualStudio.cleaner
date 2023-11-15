@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+## Aditional cleaning (by Alec Piette)
+[Pp]ackages/
+
 # User-specific files
 *.rsuser
 *.suo
